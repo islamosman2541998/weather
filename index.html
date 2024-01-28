@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ^ Title -->
+    <title>Weather App</title>
+    <!-- ^ Icon -->
+    <link rel="icon" href="./Images/logo.png">
+    <!--^ Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- ^ Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- ^ Bootstrap styling Sheet -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- ^ Main Styling Sheet -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="position-absolute top-0 start-0 w-100">
+        <nav class="navbar position-absolute z-3 top-0 start-0 w-100 navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="./Images/logo.png" class="w-100" alt="cloud logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item m-2 border px-3 border-1 rounded-5">
+                            <a class="nav-link text-white fw-bold active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item m-2 border px-3 border-1 rounded-5">
+                            <a class="nav-link text-white fw-bold" href="#">Features</a>
+                        </li>
+                        <li class="nav-item m-2 border px-3 border-1 rounded-5">
+                            <a class="nav-link text-white fw-bold" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item m-2 border px-3 border-1 rounded-5">
+                            <a class="nav-link text-white fw-bold" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="main-weather container-fluid  vh-100 overflow-auto">
+
+            <div class="search-field w-75 m-auto">
+                <input type="search" class="search-bar w-100 mt-10 mb-5 text-white border-0 px-4 py-3 form-control"
+                    placeholder="Find your Location...">
+                <div class="table-cover w-100 m-0 position-relative">
+                    <table class="table w-100 m-0 p-0 position-absolute top-0 start-0">
+                        <thead></thead>
+                        <tbody class="tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="main-weather-cards row container m-auto">
+                <div class="weather-card col-lg-4 first-col p-0">
+                    <div class="dayInfo p-4 py-3 d-flex w-100 justify-content-between">
+                        <p class="currDay m-0">Monday</p>
+                        <p class="currDate m-0">3 January</p>
+                    </div>
+                    <div class="degreeInfo p-4">
+                        <h3 class="cityName">Cairo</h3>
+                        <div class="degreeWithImg d-flex justify-content-between  align-items-center">
+                            <p class="currDegree text-white m-0">19&deg;C</p>
+                            <img class="w-25 m-0 todayCondition-icon" src="./weather/64x64/day/113.png" alt="cloud">
+                        </div>
+                        <p class="degreeDes todayCondition-text text-center">Partly cloudy</p>
+                        <ul
+                            class="position-relative m-0 list-unstyled d-flex align-items-center justify-content-center">
+                            <li class="precip_in mx-3">20%</li>
+                            <li class="wind_kph mx-3">18km/h</li>
+                            <li class="wind_dir mx-3">East</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="weather-card col-lg-4 second-col p-0">
+                    <div class="dayInfo p-4 py-3 d-flex w-100 justify-content-between">
+                        <p class="tomorrow m-0 m-auto">Tuesday</p>
+                    </div>
+                    <div class="degreeInfo p-4">
+                        <div
+                            class="degreeWithImg d-flex h-150px flex-column-reverse justify-content-center align-items-center">
+                            <p class="tomorrowMinDeg text-secondary fs-6 m-0">12&deg;C</p>
+                            <p class="tomorrowMaxDeg text-white fs-4 m-0">16&deg;C</p>
+                            <img class="w-50px m-0 m-0 tomorrowCondition-icon" src="./weather/64x64/day/113.png"
+                                alt="cloud">
+                        </div>
+                        <p class="degreeDes text-center mt-4 tomorrowCondition-text">Sunny</p>
+                    </div>
+                </div>
+                <div class="weather-card col-lg-4 third-col p-0">
+                    <div class="dayInfo p-4 py-3 d-flex w-100 justify-content-between">
+                        <p class="overmorrow m-0 m-auto">Wednesday</p>
+                    </div>
+                    <div class="degreeInfo p-4">
+                        <div
+                            class="degreeWithImg d-flex h-150px flex-column-reverse justify-content-center align-items-center">
+                            <p class="overmorrowMinDeg text-secondary fs-6 m-0">12&deg;C</p>
+                            <p class="overmorrowMaxDeg text-white fs-4 m-0">16&deg;C</p>
+                            <img class="w-50px m-0 m-0 overmorrowCondition-icon" src="./weather/64x64/day/113.png"
+                                alt="cloud">
+                        </div>
+                        <p class="degreeDes text-center mt-4 overmorrowCondition-text">Partly cloudy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center text-white p-4 d-flex justify-content-center align-self-center">
+        <p>&copy;2023 Designed by <span class="fw-bolder">islam 3sman</span>. All rights reserved</p>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

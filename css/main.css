@@ -1,0 +1,227 @@
+.coco>p {
+    background-color: red;
+
+}
+
+
+:root {
+    --main-color: #009AD8;
+    --second-color: #1E202B;
+    --second-color-opacity: rgba(30, 32, 43, 0.6);
+    --main-transition: .4s;
+    --background-cards: rgba(30, 32, 43, 0.8);
+    --bs-navbar-toggler-icon-bg: url(../Images/download.svg);
+}
+
+.mt-10 {
+    margin-top: 100px !important;
+}
+
+.main-weather {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.250) 50%, rgba(0, 0, 0, 0.250) 50%), url(../Images/summer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.w-50px {
+    width: 50px;
+}
+
+.h-150px {
+    height: 150px;
+}
+
+
+.navbar ul li {
+    transition: var(--main-transition);
+    border-color: #009bd800 !important;
+}
+
+.navbar ul li:hover {
+    border-color: var(--main-color) !important;
+}
+
+.nav-item a {
+    transition: var(--main-transition);
+}
+
+.nav-item:hover a {
+    color: var(--main-color) !important;
+}
+
+
+
+
+.navbar {
+    background-color: var(--second-color-opacity);
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        background-color: var(--second-color);
+    }
+
+    .navbar-toggler {
+        border: 3px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-toggler-icon {
+        background-image: url(../Images/download.svg);
+    }
+
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.02);
+        margin: 20px 0px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .navbar-collapse ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.203) !important;
+        border-radius: 0 !important;
+    }
+
+    .navbar-collapse ul li a {
+        font-weight: normal !important;
+    }
+}
+
+
+.search-bar {
+    --bs-border-radius: 10px;
+    background-color: var(--second-color-opacity);
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.search-bar:focus {
+    background-color: var(--second-color);
+    outline: none;
+    box-shadow: none;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+::placeholder {
+    color: rgba(245, 245, 245, 0.75) !important;
+}
+
+
+.table tbody td {
+    background-color: var(--second-color);
+    padding: 15px 30px;
+    color: whitesmoke;
+    font-weight: lighter;
+}
+
+.table tbody tr:last-child td {
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.table tbody td:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.weather-card.first-col {
+    color: rgba(255, 255, 255, 0.75);
+    background-color: var(--second-color-opacity);
+    border-radius: 10px 0px 0px 10px;
+}
+
+@media (max-width: 767px) {
+    .weather-card.first-col {
+        height: calc(100vh - 204px - 100px);
+        margin-bottom: 100px;
+    }
+
+    .weather-card.second-col,
+    .weather-card.third-col {
+        height: calc(50vh - 102px - 25px);
+        margin-bottom: 25px;
+    }
+
+    .weather-card.first-col .degreeWithImg {
+        flex-direction: column;
+    }
+
+    .weather-card.first-col .degreeWithImg .currDegree {
+        font-size: 50px;
+    }
+
+
+
+}
+
+
+.weather-card.second-col {
+    color: rgba(255, 255, 255, 0.75);
+    background-color: var(--background-cards);
+    border-radius: 0px;
+}
+
+.weather-card.third-col {
+    color: rgba(255, 255, 255, 0.75);
+    background-color: var(--second-color-opacity);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.weather-card.first-col .dayInfo {
+    background-color: var(--second-color-opacity);
+    border-radius: 10px 0px 0px 0px;
+}
+
+
+.weather-card.second-col .dayInfo {
+    background-color: var(--background-cards);
+    border-radius: 0px;
+}
+
+.weather-card.third-col .dayInfo {
+    background-color: var(--second-color-opacity);
+    border-radius: 0px 10px 0px 0px;
+    text-align: center;
+}
+
+
+.currDegree {
+    font-size: 90px;
+    font-weight: bolder;
+}
+
+.degreeDes {
+    color: var(--main-color);
+}
+
+.iconInfo p {
+    position: relative;
+}
+
+ul .wind_kph::before,
+ul .wind_dir::before,
+ul .precip_in::before {
+    content: '\f0e9';
+    margin: 0px 8px;
+    font-weight: 800;
+    font-family: 'Font Awesome 5 Free';
+}
+
+
+ul .wind_dir::before {
+    content: '\f14e';
+}
+
+ul .wind_kph::before {
+    content: '\f72e';
+}
+
+footer {
+    background-color: var(--second-color);
+}
+
+footer span {
+    color: var(--main-color);
+}
